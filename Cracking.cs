@@ -177,8 +177,7 @@ namespace PasswordCrackingClient
 
             for (int i = 0; i < numberOfUsers-1; i++)
             {
-                Console.WriteLine(seperatedUserInfo[i]);
-                Console.WriteLine(seperatedUserInfo[i+1]);
+                
                 UserInfo userInfo = new UserInfo(seperatedUserInfo[i], (seperatedUserInfo[i+1]+ "="));
                 result.Add(userInfo);
                 i++;

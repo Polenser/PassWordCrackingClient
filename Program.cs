@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace PasswordCrackingClient
@@ -15,7 +16,16 @@ namespace PasswordCrackingClient
         private static string passwords = "Empty";
         static void Main(string[] args)
         {
-            SingleRequest();
+            Thread t1 = new Thread(SingleRequest);
+            Thread t2 = new Thread(SingleRequest);
+            Thread t3 = new Thread(SingleRequest);
+            Thread t4 = new Thread(SingleRequest);
+            t1.Start();
+            t2.Start();
+            t3.Start();
+            t4.Start();
+
+
         }
 
         private static void SingleRequest()
