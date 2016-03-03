@@ -54,6 +54,7 @@ namespace PasswordCrackingClient
             Console.WriteLine();
             Console.WriteLine("Time elapsed: {0}", stopwatch.Elapsed);
             solvedPasswords = solvedPasswords + "," + stopwatch.Elapsed;
+            return solvedPasswords;
         }
 
         /// <summary>
