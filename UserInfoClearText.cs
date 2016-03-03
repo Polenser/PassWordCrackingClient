@@ -27,7 +27,7 @@ namespace PasswordCrackingClient
 
         public override string ToString()
         {
-            return UserName + ":" + Password;
+            return UserName + "$" + Password;
         }
     }
 }

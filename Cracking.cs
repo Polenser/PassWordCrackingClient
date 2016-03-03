@@ -53,7 +53,7 @@ namespace PasswordCrackingClient
             Console.WriteLine("Out of {0} password {1} was found ", userInfos.Count, result.Count);
             Console.WriteLine();
             Console.WriteLine("Time elapsed: {0}", stopwatch.Elapsed);
-            return solvedPasswords;
+            solvedPasswords = solvedPasswords + "," + stopwatch.Elapsed;
         }
 
         /// <summary>
