@@ -35,7 +35,7 @@ namespace PasswordCrackingClient
                 
                 Cracking cracker = new Cracking();
                 passwords = cracker.RunCracking(response);
-                if (passwords != "Empty")
+                if (passwords.Length > 20)
                 {
                     ReturnResult();
                 }
@@ -51,7 +51,7 @@ namespace PasswordCrackingClient
             {
                 NetworkStream stream = client.GetStream();
                 StreamWriter writer = new StreamWriter(stream);
-                writer.WriteLine(passwords);
+                writer.WriteLine("RES " +passwords);
                 writer.Flush();
                 
             }
